@@ -17,6 +17,18 @@ def main():
     part1_score = 0
     part2_score = 0
 
+    # part 1
+    for line in lines:
+        first, second = line[:len(line)//2], line[len(line)//2:]
+        part1_score += get_priority(
+            list(
+                set(first).intersection(set(second))
+            )[0]
+        )
+
+    print('part1 score', part1_score)
+
+    # part 2
     groups = list(zip(*(iter(lines),) * 3))
 
     for a,b,c in groups:
