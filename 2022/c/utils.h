@@ -8,7 +8,6 @@
     #include <time.h>
 
     /***** Errors *****/
-
     #define ABORT(msg, ...) \
         fprintf(stderr, "%s:%d: " msg "\n", __FILE__, __LINE__, ##__VA_ARGS__); \
         exit(1);
